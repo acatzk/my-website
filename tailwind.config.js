@@ -9,6 +9,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      fontFamily: {
+        'sans': ['Poppins', 'Roboto']
+      },
       colors: {
         teal: colors.teal,
         lightBlue: colors.lightBlue,
