@@ -1,5 +1,5 @@
 <template>
-  <header class="bg-gray-900 sticky top-0">
+  <header class="bg-gray-900 sticky top-0 md:bg-gradient-to-r from-blue-500 to-cyan-300">
     <div class="flex items-center justify-between px-6 py-3 container mx-auto max-w-6xl">
       <div class="flex-shrink-0">
         <img class="h-5" src="https://nuxtjs.org/logos/nuxtjs-typo.svg" alt="logo">
