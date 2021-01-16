@@ -1,14 +1,50 @@
 <template>
-  <header class="bg-gray-900 sticky top-0 md:bg-gradient-to-r from-blue-500 to-cyan-300">
+  <header class="bg-gray-900 sticky top-0 md:bg-gradient-to-r from-blue-500 to-cyan-300 z-10">
     <div class="flex items-center justify-between px-6 py-3 container mx-auto max-w-6xl">
       <div class="flex-shrink-0">
-        <img class="h-5" src="https://nuxtjs.org/logos/nuxtjs-typo.svg" alt="logo">
+        <img class="h-5 lg:h-6" src="https://nuxtjs.org/logos/nuxtjs-typo.svg" alt="logo">
       </div>
       <nav>
-        <button class="block focus:outline-none rounded focus:ring-2 ring-teal-600">
+        <button class="block focus:outline-none rounded focus:ring-2 ring-teal-600 md:hidden">
           <svg class="w-8 h-8 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" color="#000000"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
         </button>
+        <div class="hidden md:block">
+          <ul class="flex items-center space-x-6 lg:space-x-8">
+            <li v-for="(link, i) in links" :key="i" class="transform transition hover:scale-105 ease-in-out duration-300">
+              <nuxt-link :to="link.to" class="text-white font-semibold tracking-wide text-sm lg:text-base">
+                {{ link.title }}
+              </nuxt-link>
+            </li>
+          </ul>
+        </div>
       </nav>
     </div>
   </header>
 </template>
+
+<script>
+  export default {
+    data () {
+      return {
+        links: [
+          {
+            title: 'About',
+            to: '/'
+          },
+          {
+            title: 'Portfolio',
+            to: '/portfolio'
+          },
+          {
+            title: 'Blogs',
+            to: '/blogs'
+          },
+          {
+            title: 'Contact',
+            to: '/contact'
+          }
+        ]
+      }
+    }
+  }
+</script>
