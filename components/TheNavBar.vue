@@ -1,17 +1,20 @@
 <template>
   <header class="bg-gray-900 sticky top-0 md:bg-gradient-to-r from-blue-500 to-cyan-300 z-10">
-    <div class="flex items-center justify-between px-6 py-3 container mx-auto max-w-6xl">
-      <div class="flex-shrink-0">
+    <div class="flex items-center justify-between px-6 container mx-auto max-w-6xl">
+      <div class="flex-shrink-0 py-3">
         <img class="h-5 lg:h-6" src="https://nuxtjs.org/logos/nuxtjs-typo.svg" alt="logo">
       </div>
       <nav>
         <button class="block focus:outline-none rounded focus:ring-2 ring-teal-600 md:hidden">
-          <svg class="w-8 h-8 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" color="#000000"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+          <svg class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" color="#000000"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
         </button>
         <div class="hidden md:block">
-          <ul class="flex items-center space-x-6 lg:space-x-8">
-            <li v-for="(link, i) in links" :key="i" class="transform transition hover:scale-105 ease-in-out duration-300">
-              <nuxt-link :to="link.to" class="text-white font-semibold tracking-wide text-sm lg:text-base">
+          <ul class="flex items-center pt-4 space-x-6 lg:space-x-8">
+            <li v-for="(link, i) in links" :key="i" 
+                @click.prevent="setLink = link.title"
+                :class="`${link.title === setLink ? 'border-white' : 'border-transparent'} pb-3 border-b-2`">
+              <nuxt-link  :to="link.to" class="text-white font-semibold tracking-wide text-sm lg:text-base" 
+                          :class="`${link.title !== setLink ? 'nav-link' : undefined}`">
                 {{ link.title }}
               </nuxt-link>
             </li>
@@ -26,6 +29,7 @@
   export default {
     data () {
       return {
+        setLink: 'About',
         links: [
           {
             title: 'About',
@@ -48,3 +52,34 @@
     }
   }
 </script>
+
+<style scoped>
+  .nav-link {
+    position: relative;
+  }
+  .nav-link::before, .current::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -0.9rem;
+    background-color: white;
+    width: 100%;
+    height: 2px;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transform-origin: left;
+            transform-origin: left;
+    -webkit-transition: -webkit-transform 650ms;
+    transition: -webkit-transform 650ms;
+    transition: transform 650ms;
+    transition: transform 650ms, -webkit-transform 650ms;
+  }
+  .current::before {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  .nav-link:hover::before {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+</style>
