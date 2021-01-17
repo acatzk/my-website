@@ -5,7 +5,7 @@
         <div class="flex-shrink-0 py-3">
           <img class="h-8 w-8 rounded-full object-cover border-2" src="@/assets/images/avatar.png" alt="logo">
         </div>
-        <span class="font-semibold text-white tracking-widest">Snow~hat</span>
+        <span class="font-semibold text-white tracking-widest">Dream~hat</span>
       </div>
       <nav>
         <button class="block focus:outline-none rounded focus:ring-2 ring-teal-600 md:hidden">
