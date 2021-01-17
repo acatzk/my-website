@@ -1,8 +1,11 @@
 <template>
   <header class="bg-gray-900 sticky top-0 md:bg-gradient-to-r from-blue-500 to-cyan-300 z-10">
     <div class="flex items-center justify-between px-6 container mx-auto max-w-6xl">
-      <div class="flex-shrink-0 py-3">
-        <img class="h-5 lg:h-6" src="https://nuxtjs.org/logos/nuxtjs-typo.svg" alt="logo">
+      <div class="flex items-center space-x-3">
+        <div class="flex-shrink-0 py-3">
+          <img class="h-8 w-8 rounded-full object-cover border-2" src="@/assets/images/avatar.png" alt="logo">
+        </div>
+        <span class="font-semibold text-white tracking-widest">Snow~hat</span>
       </div>
       <nav>
         <button class="block focus:outline-none rounded focus:ring-2 ring-teal-600 md:hidden">
