@@ -2,13 +2,15 @@
   <div>
     <section class="bg-gradient-to-r from-blue-500 to-cyan-300">
       <div class="container mx-auto max-w-6xl">
-        <div class="py-9 px-6 flex flex-col md:flex-row-reverse md:items-center md:justify-around">
-          <div class="flex-shrink-0 py-6">
-            <img class="w-full sm:w-96 transform transition hover:-rotate-12 ease-in-out duration-500" src="@/assets/svgs/snow-globe.svg" alt="image">
+        <div class="py-9 px-6 flex flex-col md:flex-row-reverse items-center md:justify-around">
+          <div class="flex-shrink-0 py-3 sm:py-6">
+            <img class="w-56 sm:w-auto rounded-full shadow-xl border ring-4 ring-white transform transition hover:-rotate-6 ease-in-out duration-500 object-cover" src="https://avatars3.githubusercontent.com/u/38458781?s=460&u=8fc4b0725bdcdd4624fc99ac4fb4ac64ee8768cc&v=4" alt="image">
           </div>
           <div class="max-w-lg md:max-w-xl py-6">
-            <h1 class="font-bold text-white text-xl leading-relaxed xs:text-2xl lg:text-4xl">I'm Joshua Galit a Web Designer Freak!</h1>
-            <p class="pt-6 text-sm text-white leading-loose">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus inventore dicta dolorum consectetur quis ullam quo, blanditiis corrupti possimus dolore, pariatur impedit esse facere maiores quia sed deserunt! Optio, nostrum.</p>
+            <h1 class="uppercase font-semibold tracking-tight text-white text-3xl  md:text-5xl lg:text-6xl">
+              Joshua <span class="font-normal tracking-wide bg-gradient-to-b from-cyan-100 to-blue-100 bg-clip-text text-transparent">Galit</span>
+            </h1>
+            <p class="pt-6 text-sm sm:text-base text-white leading-loose">I am 21-year old dedicated and enthusiastic web developer trying to make the world look a bit better. I loved rebuilding existing social websites and addict in single page app and playin' guitar.</p>
             <div class="space-x-0 xs:space-x-2">
               <a href="#" class="inline-block bg-white mt-5 px-8 py-2 text-blue-500 rounded-full font-bold uppercase text-sm tracking-wide transform transition hover:scale-105 ease-in-out duration-300">
                 Read more
@@ -54,7 +56,7 @@
           </div>
 
           <div class="flex-shrink-0 py-8">
-            <img class=" h-80" src="@/assets/svgs/snow-globe.svg" alt="image">
+            <img class="h-80" src="@/assets/svgs/snow-globe.svg" alt="image">
           </div>
 
           <div class="space-y-6">
