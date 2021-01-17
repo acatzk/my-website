@@ -11,12 +11,13 @@
         <div class="hidden md:block">
           <ul class="flex items-center pt-4 space-x-6 lg:space-x-8">
             <li v-for="(link, i) in links" :key="i" 
-                @click.prevent="setLink = link.title"
                 :class="`${link.title === setLink ? 'border-white' : 'border-transparent'} pb-3 border-b-2`">
-              <nuxt-link  :to="link.to" class="text-white font-semibold tracking-wide text-sm lg:text-base" 
+              <button class="focus:outline-none" @click.prevent="setLink = link.title">
+                <nuxt-link  :to="link.to" class="text-white font-semibold tracking-wide text-sm lg:text-base" 
                           :class="`${link.title !== setLink ? 'nav-link' : undefined}`">
                 {{ link.title }}
               </nuxt-link>
+              </button>
             </li>
           </ul>
         </div>
