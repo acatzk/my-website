@@ -1,12 +1,14 @@
 <template>
   <header class="bg-gray-900 sticky top-0 md:bg-gradient-to-r from-blue-500 to-cyan-300 z-10">
     <div class="flex items-center justify-between px-6 container mx-auto max-w-6xl">
-      <div class="flex items-center space-x-3">
+      <router-link to="/" class="flex items-center space-x-3">
         <div class="flex-shrink-0 py-3">
           <img class="h-8 w-8 rounded-full object-cover border-2" src="@/assets/images/avatar.png" alt="logo">
         </div>
-        <span class="font-semibold text-white tracking-widest">Dream~hat</span>
-      </div>
+        <span class="font-semibold text-white tracking-wider text-base font-sans">
+          Joshua Galit
+        </span>
+      </router-link>
       <nav>
         <button class="block focus:outline-none rounded focus:ring-2 ring-teal-600 md:hidden">
           <svg class="w-6 h-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" color="#000000"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
@@ -44,14 +46,19 @@
             to: '/portfolio'
           },
           {
-            title: 'Blogs',
-            to: '/blogs'
+            title: 'Blog',
+            to: '/blog'
           },
           {
             title: 'Contact',
             to: '/contact'
           }
         ]
+      }
+    },
+    computed: {
+      hello (){
+        return this.links.fiter()
       }
     }
   }
