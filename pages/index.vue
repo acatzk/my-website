@@ -10,7 +10,7 @@
             <h1 class="uppercase font-semibold text-center sm:text-left tracking-tight text-white text-3xl  md:text-5xl lg:text-6xl">
               Joshua <span class="font-normal tracking-wide bg-gradient-to-b from-cyan-100 to-blue-100 bg-clip-text text-transparent">Galit</span>
             </h1>
-            <p class="pt-6 text-sm sm:text-base text-white leading-relaxed">I am 21-year old dedicated and enthusiastic web developer trying to make the world look a bit better. I loved rebuilding existing social websites and addict in single page app and playin' guitar.</p>
+            <p class="pt-6 text-sm sm:text-base text-white leading-relaxed font-sans">I am 21-year old dedicated and enthusiastic web developer trying to make the world look a bit better. I loved rebuilding existing social websites and addict in single page app and playin' guitar.</p>
             <div class="space-x-0 xs:space-x-2">
               <a href="#" class="inline-block bg-white mt-5 px-9 py-2 text-blue-400 rounded-full font-bold uppercase text-sm tracking-wide transform transition hover:scale-105 ease-in-out duration-300">
                 Read more
@@ -23,10 +23,11 @@
         </div>
       </div>
     </section>
+    
     <section class="bg-white">
-      <div class="container mx-auto max-w-6xl">
-        <div class="grid grid-cols-1 lg:grid-cols-8 gap-14 py-9 px-6">
-          <div class="lg:col-span-5">
+      <div class="container mx-auto max-w-5xl">
+        <div class="grid grid-cols-1 lg:grid-cols-8 gap-14 py-6 px-6">
+          <div class="lg:col-span-6">
             <div class="overflow-hidden border border-gray-200 border-opacity-75 rounded-md shadow">
               <div class="flex items-center justify-between w-full p-3 bg-gray-100">
                 <div class="flex items-center space-x-2">
@@ -43,13 +44,43 @@
                 </div>
               </pre>
             </div>
-            </div>
-            <div class="items-center justify-center hidden col-span-2 lg:flex">
-              <h3 class="text-2xl leading-normal text-blue-900 uppercase">
+          </div>
+          <div class="items-center justify-center hidden col-span-2 lg:flex">
+            <h3 class="text-2xl leading-normal text-blue-900 uppercase">
                 <span>Who I am</span>
                 <div class="w-12 h-1 bg-blue-900 bg-opacity-75">
               </div>
             </h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="container mx-auto max-w-5xl mb-10">
+        <div class="grid grid-cols-1 lg:grid-cols-8 gap-14 px-6">
+          <div class="items-center justify-center hidden col-span-2 lg:flex">
+            <h3 class="text-2xl leading-normal text-blue-900 uppercase">
+                <span>What I Do</span>
+                <div class="w-12 h-1 bg-blue-900 bg-opacity-75">
+              </div>
+            </h3>
+          </div>
+          <div class="lg:col-span-6">
+            <div class="overflow-hidden border border-gray-200 border-opacity-75 rounded-md shadow">
+              <div class="flex items-center justify-between w-full p-3 bg-gray-100">
+                <div class="flex items-center space-x-2">
+                  <div class="w-3 h-3 bg-red-300 border border-red-400 rounded-full"></div>
+                  <div class="w-3 h-3 bg-yellow-300 border border-yellow-400 rounded-full"></div>
+                  <div class="w-3 h-3 bg-green-300 border border-green-400 rounded-full"></div>
+                </div>
+              </div>
+              <pre class="w-full p-5 overflow-auto font-mono leading-5 text-gray-700 break-all whitespace-pre-wrap bg-white select-text">
+                <div class="flex items-baseline space-x-4 leading-relaxed" v-for="(w, i) in whatido" :key="i">
+                  <span class="text-sm leading-relaxed text-gray-400 select-none">{{ w.id }}</span>
+                  <span class="text-gray-400">{{ w.title }}</span>
+                  <span class="text-gray-700">{{ w.text }}</span>
+                </div>
+              </pre>
+            </div>
           </div>
         </div>
       </div>
@@ -60,7 +91,7 @@
 <script>
   export default {
     head: {
-      title: 'Snow~hat'
+      title: 'About | Joshua Galit'
     },
     data () {
       return {
@@ -91,14 +122,68 @@
           },
           {
             id: 7,
-            text: ' "Food",'
+            text: '    "Food",'
           },
           {
             id: 8,
-            text: ' "Writing useless comments in code"'
+            text: '    "Playing guitar",'
           },
           {
             id: 9,
+            text: '    "Redesigning popular websites"'
+          },
+          {
+            id: 10,
+            text: '];'
+          }
+        ],
+        whatido: [
+          {
+            id: 1,
+            title: '// Most important skills'
+          },
+          {
+            id: 2,
+            text: 'const languages = ['
+          },
+          {
+            id: 3,
+            text: '    "JavaScript",'
+          },
+          {
+            id: 4,
+            text: '    "PHP",'
+          },
+          {
+            id: 5,
+            text: '    "c#"'
+          },
+          {
+            id: 6,
+            text: '];'
+          },
+          {
+            id: 7,
+            text: ''
+          },
+          {
+            id: 8,
+            text: 'const frameworks = ['
+          },
+          {
+            id: 9,
+            text: '    "Vue",'
+          },
+          {
+            id: 10,
+            text: '   "Nuxt",'
+          },
+          {
+            id: 11,
+            text: '   "Tailwindcss"'
+          },
+          {
+            id: 12,
             text: '];'
           }
         ]
