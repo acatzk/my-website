@@ -24,7 +24,11 @@ module.exports = {
       colors: {
         teal: colors.teal,
         lightBlue: colors.lightBlue,
-        cyan: colors.cyan
+        cyan: colors.cyan,
+        'blue-facebook': '#3b5998',
+        'gray-github': '#333',
+        'skyblue-twitter': '#00acee',
+        'orange-stackoverflow': '#f48024'
       }
     },
   },
