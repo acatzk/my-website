@@ -28,7 +28,8 @@ module.exports = {
         'blue-facebook': '#3b5998',
         'gray-github': '#333',
         'skyblue-twitter': '#00acee',
-        'orange-stackoverflow': '#f48024'
+        'orange-stackoverflow': '#f48024',
+        'blue-linkedin': '#0e76a8'
       }
     },
   },
